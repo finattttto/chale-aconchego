@@ -1,5 +1,4 @@
-import { INSTAGRAM_LINK, WHATSAPP_LINK } from "@/constants";
-
+import { INSTAGRAM_LINK, WHATSAPP_LINK } from "@/lib/constants";
 
 export function Footer() {
   return (
