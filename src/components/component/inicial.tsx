@@ -116,7 +116,7 @@ export function Inicial() {
                 <div className="bg-background p-4">
                   <h3 className="text-xl font-bold mb-2">Sala de Estar</h3>
                   <p className="text-muted-foreground">
-                    Aconchegante sala de estar com lareira e vista para as montanhas.
+                    Aconchegante sala de estar com lareira e vista para o pôr do sol.
                   </p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export function Inicial() {
                 />
                 <div className="bg-background p-4">
                   <h3 className="text-xl font-bold mb-2">Quartos</h3>
-                  <p className="text-muted-foreground">Três quartos confortáveis com vista para as montanhas.</p>
+                  <p className="text-muted-foreground">Três quartos confortáveis com vista para o pôr do sol.</p>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export function Inicial() {
                 <CollapsibleContent className="bg-muted px-4 py-3 rounded-b-md">
                   <p className="text-muted-foreground">
                     O chalé possui 1 quarto, 1 banheiro, sala de estar, cozinha totalmente equipada e varanda com vista
-                    para as montanhas.
+                    para o pôr do sol.
                   </p>
                 </CollapsibleContent>
               </Collapsible>
