@@ -26,37 +26,34 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
-// import { Label } from "@/components/ui/label"
-// import { Input } from "@/components/ui/input"
-// import { Textarea } from "@/components/ui/textarea"
 import Footer from "./footer"
+import Perguntas from "./perguntas"
+import Informacoes from "./informacoes"
 
 export function Inicial() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-primary px-4 lg:px-6 py-4 flex items-center justify-between">
+      <header className="bg-primary px-4 lg:px-6 py-4 flex items-center justify-between h-100">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6 text-primary-foreground" />
           <span className="text-lg font-semibold text-primary-foreground">Chalé Aconchego</span>
         </Link>
-        <nav className="hidden md:flex gap-4">
+        {/* <nav className="hidden md:flex gap-4">
           <Link href="#" className="text-primary-foreground hover:underline underline-offset-4" prefetch={false}>
             Contato
           </Link>
-        </nav>
-        <Button variant="outline" className="md:hidden">
-          <MenuIcon className="h-6 w-6 text-primary-foreground" />
-        </Button>
+        </nav> */}
       </header>
       <main className="flex-1">
         <section className="bg-[url('/assets/banner.jpg')] bg-cover bg-center h-[60vh] relative">
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <div className="text-center text-white max-w-xl px-4">
-              <h1 className="text-4xl font-bold mb-4">Bem-vindo ao Chalé Aconchego</h1>
-              <p className="text-lg mb-8">
+            <div className="p-6 rounded-lg shadow-lg max-w-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.25)', position: 'relative' }}>
+              <h1 className="text-3xl font-bold text-black text-center mb-2" style={{ position: 'relative', zIndex: 1 }}>
+                Bem-vindo ao Chalé Aconchego
+              </h1>
+              <p className="text-lg text-black text-center" style={{ position: 'relative', zIndex: 1 }}>
                 Onde cada detalhe é sinônimo de conforto e tranquilidade em conexão com a natureza!
               </p>
-              <Button className="px-6 py-3">Reserve Agora</Button>
             </div>
           </div>
         </section>
@@ -93,7 +90,7 @@ export function Inicial() {
                   </div>
                   <div className="flex items-center gap-2">
                     <DollarSignIcon className="w-5 h-5 text-primary" />
-                    <span>R$ 300 / noite</span>
+                    <span>Pet friendly</span>
                   </div>
                 </div>
               </div>
@@ -101,117 +98,15 @@ export function Inicial() {
           </div>
         </section>
         <section className="bg-muted py-12 md:py-16 lg:py-20">
-          <div className="px-4 md:px-6 lg:px-8 grid flex justify-center w-100">
-            <h2 className="text-3xl font-bold mb-8 text-center">Explore o Chalé</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/assets/chale-frente.jpg"
-                  max-width={600}
-                  height={400}
-                  alt="Sala de estar"
-                  className="w-full h-64 object-cover"
-                  style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                />
-                <div className="bg-background p-4">
-                  <h3 className="text-xl font-bold mb-2">Sala de Estar</h3>
-                  <p className="text-muted-foreground">
-                    Aconchegante sala de estar com lareira e vista para o pôr do sol.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/assets/chale-frente.jpg"
-                  max-width={600}
-                  height={400}
-                  alt="Cozinha"
-                  className="w-full h-64 object-cover"
-                  style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                />
-                <div className="bg-background p-4">
-                  <h3 className="text-xl font-bold mb-2">Cozinha</h3>
-                  <p className="text-muted-foreground">
-                    Cozinha totalmente equipada com tudo o que você precisa para preparar suas refeições.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img
-                  src="/assets/chale-frente.jpg"
-                  max-width={600}
-                  height={400}
-                  alt="Quarto"
-                  className="w-full h-64 object-cover"
-                  style={{ aspectRatio: "600/400", objectFit: "cover" }}
-                />
-                <div className="bg-background p-4">
-                  <h3 className="text-xl font-bold mb-2">Quartos</h3>
-                  <p className="text-muted-foreground">Três quartos confortáveis com vista para o pôr do sol.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Informacoes />
         </section>
         <section className="bg-background py-12 md:py-16 lg:py-20">
-          <div className="container px-4 md:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Perguntas Frequentes</h2>
-            <div className="grid gap-6">
-              <Collapsible>
-                <CollapsibleTrigger className="flex items-center justify-between bg-muted px-4 py-3 rounded-md [&[data-state=open]>svg]:rotate-180">
-                  <h3 className="text-lg font-semibold">Quais são as acomodações?</h3>
-                  <ChevronDownIcon className="w-5 h-5 text-muted-foreground transition-transform" />
-                </CollapsibleTrigger>
-                <CollapsibleContent className="bg-muted px-4 py-3 rounded-b-md">
-                  <p className="text-muted-foreground">
-                    O chalé possui 1 quarto, 1 banheiro, sala de estar, cozinha totalmente equipada e varanda com vista
-                    para o pôr do sol.
-                  </p>
-                </CollapsibleContent>
-              </Collapsible>
-              <Collapsible>
-                <CollapsibleTrigger className="flex items-center justify-between bg-muted px-4 py-3 rounded-md [&[data-state=open]>svg]:rotate-180">
-                  <h3 className="text-lg font-semibold">Quais são os serviços incluídos?</h3>
-                  <ChevronDownIcon className="w-5 h-5 text-muted-foreground transition-transform" />
-                </CollapsibleTrigger>
-                <CollapsibleContent className="bg-muted px-4 py-3 rounded-b-md">
-                  <p className="text-muted-foreground">
-                    O aluguel inclui Wi-Fi, utensílios de cozinha, roupa de cama e banho, além de limpeza diária.
-                  </p>
-                </CollapsibleContent>
-              </Collapsible>
-              <Collapsible>
-                <CollapsibleTrigger className="flex items-center justify-between bg-muted px-4 py-3 rounded-md [&[data-state=open]>svg]:rotate-180">
-                  <h3 className="text-lg font-semibold">Posso levar meu animal de estimação?</h3>
-                  <ChevronDownIcon className="w-5 h-5 text-muted-foreground transition-transform" />
-                </CollapsibleTrigger>
-                <CollapsibleContent className="bg-muted px-4 py-3 rounded-b-md">
-                  <p className="text-muted-foreground">
-                    Sim, animais de estimação são bem-vindos no chalé. Apenas solicitamos que você informe sobre a
-                    presença do seu pet no momento da reserva.
-                  </p>
-                </CollapsibleContent>
-              </Collapsible>
-            </div>
-          </div>
+          <Perguntas />
         </section>
         <section className="bg-muted">
           <Footer />
         </section>
       </main>
-      <footer className="bg-primary text-primary-foreground py-6">
-        <div className="container px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm">&copy; 2024 Chalé Aconchego. Todos os direitos reservados.</p>
-          <nav className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-              Política de Privacidade
-            </Link>
-            <Link href="#" className="hover:underline underline-offset-4" prefetch={false}>
-              Termos de Uso
-            </Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   )
 }
@@ -238,26 +133,6 @@ function BedIcon(props) {
   )
 }
 
-
-function ChevronDownIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  )
-}
-
 function DollarSignIcon(props) {
   return (
     <svg
@@ -272,34 +147,15 @@ function DollarSignIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <line x1="12" x2="12" y1="2" y2="22" />
-      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      <path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5" />
+      <path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5" />
+      <path d="M8 14v.5" />
+      <path d="M16 14v.5" />
+      <path d="M11.25 16.25h1.5L12 17l-.75-.75z" />
+      <path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306" />
     </svg>
   )
 }
-
-
-function MenuIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  )
-}
-
 
 function MountainIcon(props) {
   return (
