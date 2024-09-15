@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-primary text-primary-foreground py-6">
+      <div className="bg-primary text-primary-foreground py-6 flex justify-center">
         <div className="container px-4 md:px-6 lg:px-8 flex flex-col md:flex-row flex justify-center">
           <p className="text-sm">&copy; 2024 Chalé Aconchego. Todos os direitos reservados.</p>
         </div>

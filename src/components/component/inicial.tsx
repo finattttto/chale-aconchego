@@ -55,7 +55,7 @@ export function Inicial() {
             </div>
           </div>
         </section>
-        <section className="bg-background py-12 md:py-16 lg:py-20">
+        <section className="bg-background py-12 md:py-16 lg:py-20  lg:px-[13%]">
           <div className="container px-4 md:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
@@ -79,15 +79,15 @@ export function Inicial() {
                     <span>Até 2 pessoas</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <BedIcon className="w-5 h-5 text-primary" />
-                    <span>1 quarto</span>
+                    <CoolIcon className="w-5 h-5 text-primary" />
+                    <span>Ar-condicionado</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <WifiIcon className="w-5 h-5 text-primary" />
                     <span>Wi-Fi grátis</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <DollarSignIcon className="w-5 h-5 text-primary" />
+                    <PetIcon className="w-5 h-5 text-primary" />
                     <span>Pet friendly</span>
                   </div>
                 </div>
@@ -95,10 +95,10 @@ export function Inicial() {
             </div>
           </div>
         </section>
-        <section className="bg-muted py-12 md:py-16 lg:py-20">
+        <section className="bg-muted py-12 md:py-16 lg:py-20 lg:px-[15%]">
           <Informacoes />
         </section>
-        <section className="bg-background py-12 md:py-16 lg:py-20">
+        <section className="bg-background py-12 md:py-16 lg:py-20 lg:px-[15%]">
           <Perguntas />
         </section>
         <section className="bg-muted">
@@ -109,7 +109,7 @@ export function Inicial() {
   )
 }
 
-function BedIcon(props) {
+function CoolIcon(props) {
   return (
     <svg
       {...props}
@@ -123,15 +123,17 @@ function BedIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M2 4v16" />
-      <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-      <path d="M2 17h20" />
-      <path d="M6 8v9" />
+      <rect x="2" y="3" width="20" height="12" rx="2" />
+      <path d="M2 7h20" />
+      <path d="M6 15v3" />
+      <path d="M12 15v3" />
+      <path d="M18 15v3" />
+      <path d="M4 19h16" />
     </svg>
   )
 }
 
-function DollarSignIcon(props) {
+function PetIcon(props) {
   return (
     <svg
       {...props}
