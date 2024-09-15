@@ -6,7 +6,7 @@ export function Perguntas() {
     <div className="container px-4 md:px-6 lg:px-8">
       <h2 className="text-3xl font-bold mb-8 text-center">Perguntas Frequentes</h2>
       <div className="grid gap-6">
-        <Collapsible>
+        <Collapsible defaultOpen>
           <CollapsibleTrigger className="flex items-center justify-between bg-muted px-4 py-3 rounded-md [&[data-state=open]>svg]:rotate-180">
             <h3 className="text-lg font-semibold">Datas disponíveis </h3>
             <ChevronDownIcon className="w-5 h-5 text-muted-foreground transition-transform" />
