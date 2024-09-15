@@ -27,6 +27,7 @@ import Link from "next/link"
 import Footer from "./footer"
 import Perguntas from "./perguntas"
 import Informacoes from "./informacoes"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export function Inicial() {
   return (
@@ -52,6 +53,16 @@ export function Inicial() {
               <p className="text-lg text-black text-center" style={{ position: 'relative', zIndex: 1 }}>
                 Onde cada detalhe é sinônimo de conforto e tranquilidade em conexão com a natureza!
               </p>
+              <div className="flex justify-center pt-5">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  style={{ position: 'relative', zIndex: 1, color: "white" }}
+                  className="bg-[hsl(220.9,39.3%,11%)] inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+                >
+                  Reserve Agora
+                </a>
+              </div>
             </div>
           </div>
         </section>
