@@ -34,7 +34,7 @@ export function Informacoes() {
       title: "Café da manhã",
       description:
         "Reserve seu café da manhã com produtos coloniais para iniciar bem o seu dia!",
-      detail: "*Cobrança adicional."
+      detail: "*Cobrança adicional. O cardápio varia de acordo com o dia."
     },
     {
       imgSrc: "/assets/cavalo.jpg",
@@ -42,7 +42,7 @@ export function Informacoes() {
       title: "Passeio a cavalo",
       description:
         "Desfrute de uma experiência única através de um passeio a cavalo nas redondezas da propriedade!",
-        detail: "*Cobrança adicional."
+        detail: "*Cobrança adicional. Sujeito à disponibilidade."
     },
   ];
 
