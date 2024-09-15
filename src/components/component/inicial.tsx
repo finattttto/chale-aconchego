@@ -58,7 +58,7 @@ export function Inicial() {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   style={{ position: 'relative', zIndex: 1, color: "white" }}
-                  className="bg-[hsl(220.9,39.3%,11%)] inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+                  className=" hover:scale-110 bg-[hsl(220.9,39.3%,11%)] inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
                 >
                   Reserve Agora
                 </a>
