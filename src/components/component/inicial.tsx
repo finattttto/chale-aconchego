@@ -37,17 +37,12 @@ export function Inicial() {
           <MountainIcon className="h-6 w-6 text-primary-foreground" />
           <span className="text-lg font-semibold text-primary-foreground">Chalé Aconchego</span>
         </Link>
-        {/* <nav className="hidden md:flex gap-4">
-          <Link href="#" className="text-primary-foreground hover:underline underline-offset-4" prefetch={false}>
-            Contato
-          </Link>
-        </nav> */}
       </header>
       <main className="flex-1">
         <section className="bg-[url('/assets/banner.jpg')] bg-cover bg-center h-[60vh] relative">
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <div className="p-6 rounded-lg shadow-lg max-w-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.25)', position: 'relative' }}>
-              <h1 className="text-3xl font-bold text-black text-center mb-2" style={{ position: 'relative', zIndex: 1 }}>
+            <div className="p-6 rounded-lg shadow-lg max-w-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', position: 'relative' }}>
+              <h1 className="text-4xl font-bold text-black text-center mb-2" style={{ position: 'relative', zIndex: 1 }}>
                 Bem-vindo ao Chalé Aconchego
               </h1>
               <p className="text-lg text-black text-center" style={{ position: 'relative', zIndex: 1 }}>
