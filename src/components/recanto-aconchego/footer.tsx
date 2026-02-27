@@ -1,41 +1,41 @@
-import { INSTAGRAM_LINK, WHATSAPP_LINK } from "@/lib/constants";
+import { RECANTO_INSTAGRAM_LINK, RECANTO_WHATSAPP_LINK } from "@/lib/constants";
 import { Instagram, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 
-export function Footer() {
+export function RecantoFooter() {
   return (
-    <footer id="contato" className="bg-primary text-primary-foreground">
+    <footer id="contato" className="bg-[#2d3a2e] text-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-2xl font-medium">Chale Aconchego</h3>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
-              Onde cada detalhe e sinonimo de conforto e tranquilidade em conexao
-              com a natureza.
+            <h3 className="font-serif text-2xl font-medium">Recanto Aconchego</h3>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
+              Uma experiencia imersiva em meio a natureza, onde o rio, a
+              fogueira e o ceu estrelado sao seus companheiros.
             </p>
             <div className="mt-6">
               <Link
-                href="/recanto-aconchego"
-                className="text-sm text-primary-foreground/40 underline underline-offset-4 transition-colors hover:text-primary-foreground/70"
+                href="/"
+                className="text-sm text-white/40 underline underline-offset-4 transition-colors hover:text-white/70"
               >
-                Conheca tambem o Recanto Aconchego
+                Conheca tambem o Chale Aconchego
               </Link>
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/50">
+            <h4 className="text-sm font-medium uppercase tracking-[0.2em] text-white/40">
               Contato
             </h4>
             <ul className="mt-4 space-y-3">
               <li>
                 <a
-                  href={WHATSAPP_LINK}
+                  href={RECANTO_WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                  className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"
                 >
                   <Phone className="h-4 w-4" />
                   <span>(49) 99116-8043</span>
@@ -43,25 +43,25 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={INSTAGRAM_LINK}
+                  href={RECANTO_INSTAGRAM_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                  className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"
                 >
                   <Instagram className="h-4 w-4" />
                   <span>@chaleaconchegoo</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-sm text-primary-foreground/70">
+              <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                <span>Linha Macaco Branco, Descanso - SC</span>
+                <span>Descanso - SC</span>
               </li>
             </ul>
           </div>
 
           {/* Map */}
           <div className="md:col-span-2 lg:col-span-1">
-            <h4 className="text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/50">
+            <h4 className="text-sm font-medium uppercase tracking-[0.2em] text-white/40">
               Localizacao
             </h4>
             <div className="mt-4 overflow-hidden rounded-sm">
@@ -72,7 +72,7 @@ export function Footer() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localizacao do Chale Aconchego no Google Maps"
+                title="Localizacao do Recanto Aconchego no Google Maps"
               />
             </div>
           </div>
@@ -80,10 +80,10 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-primary-foreground/10">
+      <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-5 lg:px-8">
-          <p className="text-xs text-primary-foreground/40">
-            &copy; {new Date().getFullYear()} Chale Aconchego. Todos os
+          <p className="text-xs text-white/30">
+            &copy; {new Date().getFullYear()} Recanto Aconchego. Todos os
             direitos reservados.
           </p>
         </div>
