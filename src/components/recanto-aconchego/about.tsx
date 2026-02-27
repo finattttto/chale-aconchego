@@ -1,11 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import { Users, Wifi, Tent, PawPrint } from "lucide-react";
+import { Users, Wifi, Mountain, Heart } from "lucide-react";
 
 const AMENITIES = [
   { icon: Users, label: "Chale para 2 pessoas" },
-  { icon: Tent, label: "Area para camping" },
+  { icon: Mountain, label: "Area para camping" },
   { icon: Wifi, label: "Wi-Fi gratis" },
-  { icon: PawPrint, label: "Pet friendly" },
+  { icon: Heart, label: "Pet friendly" },
 ];
 
 export function RecantoAbout() {

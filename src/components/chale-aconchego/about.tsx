@@ -1,11 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import { Users, Wifi, Wind, PawPrint } from "lucide-react";
+import { Users, Wifi, Wind, Heart } from "lucide-react";
 
 const AMENITIES = [
   { icon: Users, label: "Ate 2 pessoas" },
   { icon: Wind, label: "Ar-condicionado" },
   { icon: Wifi, label: "Wi-Fi gratis" },
-  { icon: PawPrint, label: "Pet friendly" },
+  { icon: Heart, label: "Pet friendly" },
 ];
 
 export function About() {

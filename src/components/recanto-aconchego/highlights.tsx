@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
-import { Waves, Flame, TreePine, PartyPopper } from "lucide-react";
+import { Droplets, Flame, Trees, Gift } from "lucide-react";
 
 const HIGHLIGHTS = [
   {
-    icon: Waves,
+    icon: Droplets,
     title: "Acesso ao rio",
     description:
       "Banhe-se nas aguas cristalinas do rio que margeia a propriedade. Um refrescante natural perfeito.",
@@ -15,13 +17,13 @@ const HIGHLIGHTS = [
       "Reuna a familia ao redor da fogueira para noites memoraveis sob o ceu estrelado.",
   },
   {
-    icon: TreePine,
+    icon: Trees,
     title: "Espaco para acampamento",
     description:
       "Traga sua barraca e acampe em contato direto com a natureza. Perfeito para grupos maiores.",
   },
   {
-    icon: PartyPopper,
+    icon: Gift,
     title: "Area de festas",
     description:
       "Espaco externo amplo para reunir a familia e amigos, com capacidade para mais de 50 pessoas.",

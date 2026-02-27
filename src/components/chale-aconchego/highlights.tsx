@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Bath, Flame, Sun, Coffee } from "lucide-react";
 

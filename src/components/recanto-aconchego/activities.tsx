@@ -1,19 +1,21 @@
+"use client";
+
 import Image from "next/image";
-import { Waves, Volleyball, Tent, Flame, Users, TreePine } from "lucide-react";
+import { Droplets, Trophy, Mountain, Flame, Users, Trees } from "lucide-react";
 
 const ACTIVITIES = [
   {
-    icon: Waves,
+    icon: Droplets,
     title: "Rio",
     description: "Banho e diversao nas aguas cristalinas",
   },
   {
-    icon: Volleyball,
+    icon: Trophy,
     title: "Voleio",
     description: "Partidas no campo de areia",
   },
   {
-    icon: Tent,
+    icon: Mountain,
     title: "Camping",
     description: "Area para montar sua barraca",
   },
@@ -28,7 +30,7 @@ const ACTIVITIES = [
     description: "Espaco para grandes reunioes",
   },
   {
-    icon: TreePine,
+    icon: Trees,
     title: "Trilhas",
     description: "Caminhos em meio a natureza",
   },
