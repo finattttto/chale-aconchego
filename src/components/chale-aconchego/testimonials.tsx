@@ -1,7 +1,7 @@
 "use client";
 
 import { Star } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const TESTIMONIALS = [
   {
@@ -53,7 +53,6 @@ const TESTIMONIALS = [
     rating: 5,
   },
 ];
-
 function TestimonialCard({
   testimonial,
 }: {
@@ -61,7 +60,6 @@ function TestimonialCard({
 }) {
   return (
     <blockquote className="flex h-full w-80 flex-shrink-0 flex-col rounded-sm border border-border bg-background p-6 md:w-96">
-      {/* Stars */}
       <div className="flex gap-0.5">
         {Array.from({ length: testimonial.rating }).map((_, i) => (
           <Star key={i} className="h-4 w-4 fill-accent text-accent" />
@@ -86,7 +84,6 @@ function TestimonialCard({
 
 export function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -94,18 +91,15 @@ export function Testimonials() {
 
     let animationId: number;
     let scrollPosition = 0;
-    const speed = 0.5; // pixels per frame
+    const speed = 0.5;
 
     const scroll = () => {
-      if (!isPaused && scrollContainer) {
+      if (scrollContainer) {
         scrollPosition += speed;
-
-        // Reset position when we've scrolled half the content (since content is duplicated)
         const halfWidth = scrollContainer.scrollWidth / 2;
         if (scrollPosition >= halfWidth) {
           scrollPosition = 0;
         }
-
         scrollContainer.scrollLeft = scrollPosition;
       }
       animationId = requestAnimationFrame(scroll);
@@ -114,12 +108,11 @@ export function Testimonials() {
     animationId = requestAnimationFrame(scroll);
 
     return () => cancelAnimationFrame(animationId);
-  }, [isPaused]);
+  }, []); // Adicionado array vazio para rodar apenas uma vez no mount
 
   return (
     <section className="bg-card py-24 md:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section header */}
         <div className="mb-16 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
             Depoimentos
@@ -130,26 +123,18 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Infinite scroll carousel */}
       <div
         ref={scrollRef}
         className="flex gap-6 overflow-hidden px-6"
-        // onMouseEnter={() => setIsPaused(true)}
-        // onMouseLeave={() => setIsPaused(false)}
-        // onTouchStart={() => setIsPaused(true)}
-        // onTouchEnd={() => setIsPaused(false)}
       >
-        {/* Original testimonials */}
         {TESTIMONIALS.map((testimonial, index) => (
           <TestimonialCard key={`original-${index}`} testimonial={testimonial} />
         ))}
-        {/* Duplicated testimonials for seamless infinite scroll */}
         {TESTIMONIALS.map((testimonial, index) => (
           <TestimonialCard key={`duplicate-${index}`} testimonial={testimonial} />
         ))}
       </div>
 
-      {/* Gradient masks */}
       <div className="pointer-events-none relative -mt-[200px] h-[200px]">
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-card to-transparent" />
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-card to-transparent" />

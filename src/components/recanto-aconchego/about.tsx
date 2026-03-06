@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Users, Wifi, Mountain, Heart, WifiOff } from "lucide-react";
+import { Users, Mountain, Heart, WifiOff } from "lucide-react";
 
 const AMENITIES = [
   { icon: Users, label: "Chalé para 2 pessoas" },
