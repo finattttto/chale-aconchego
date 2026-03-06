@@ -6,7 +6,7 @@ import { RecantoActivities } from "@/components/recanto-aconchego/activities";
 import { RecantoHighlights } from "@/components/recanto-aconchego/highlights";
 import { RecantoExperiences } from "@/components/recanto-aconchego/experiences";
 import { RecantoVideoSection } from "@/components/recanto-aconchego/video-section";
-import { RecantoTestimonials } from "@/components/recanto-aconchego/testimonials";
+import { RecantoParallaxSection } from "@/components/recanto-aconchego/parallax-section";
 import { RecantoCtaSection } from "@/components/recanto-aconchego/cta-section";
 import { RecantoFaq } from "@/components/recanto-aconchego/faq";
 import { RecantoFooter } from "@/components/recanto-aconchego/footer";
@@ -53,7 +53,7 @@ export default function RecantoAconchego() {
         <RecantoHighlights />
         <RecantoExperiences />
         <RecantoVideoSection />
-        <RecantoTestimonials />
+        <RecantoParallaxSection />
         <RecantoCtaSection />
         <RecantoFaq />
       </main>
