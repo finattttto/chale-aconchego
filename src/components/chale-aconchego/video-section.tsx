@@ -43,32 +43,45 @@ export function VideoSection() {
       </video>
 
       {/* Gradient overlays for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-transparent" />
+      <div
+        className={`absolute inset-0 transition-opacity duration-700 ${
+          isPlaying ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-transparent" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6">
         {/* Play button - centered */}
         <button
           onClick={handlePlay}
-          className="group mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-primary-foreground/30 bg-primary-foreground/5 backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:border-primary-foreground/50 hover:bg-primary-foreground/10 md:h-32 md:w-32"
+          className={`group mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-primary-foreground/30 bg-primary-foreground/5 backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:border-primary-foreground/50 hover:bg-primary-foreground/10 md:h-32 md:w-32 ${
+            isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
           aria-label={isPlaying ? "Pausar video" : "Reproduzir video"}
         >
           <Play
-            className={`h-10 w-10 text-primary-foreground transition-all duration-300 md:h-12 md:w-12 ${
-              isPlaying ? "opacity-0 scale-75" : "opacity-100 scale-100 ml-1"
-            }`}
+            className="h-10 w-10 text-primary-foreground ml-1 md:h-12 md:w-12"
           />
-          {isPlaying && (
-            <div className="absolute flex gap-1">
-              <span className="h-8 w-1 animate-pulse rounded-full bg-primary-foreground/80" />
-              <span className="h-8 w-1 animate-pulse rounded-full bg-primary-foreground/80 [animation-delay:150ms]" />
-            </div>
-          )}
         </button>
 
+        {/* Clickable overlay to pause when playing */}
+        {isPlaying && (
+          <button
+            onClick={handlePlay}
+            className="absolute inset-0 z-20 cursor-pointer"
+            aria-label="Pausar video"
+          />
+        )}
+
         {/* Text content */}
-        <div className="text-center">
+        <div
+          className={`text-center transition-all duration-700 ${
+            isPlaying ? "opacity-0 translate-y-4 pointer-events-none" : "opacity-100 translate-y-0"
+          }`}
+        >
           <p className="text-xs uppercase tracking-[0.4em] text-primary-foreground/70">
             Descubra
           </p>
@@ -83,7 +96,9 @@ export function VideoSection() {
         {/* Mute toggle - bottom right */}
         <button
           onClick={toggleMute}
-          className="absolute bottom-8 right-8 flex h-12 w-12 items-center justify-center rounded-full border border-primary-foreground/20 bg-primary-foreground/5 backdrop-blur-sm transition-all hover:border-primary-foreground/40 hover:bg-primary-foreground/10"
+          className={`absolute bottom-8 right-8 z-30 flex h-12 w-12 items-center justify-center rounded-full border border-primary-foreground/20 bg-primary-foreground/5 backdrop-blur-sm transition-all hover:border-primary-foreground/40 hover:bg-primary-foreground/10 ${
+            isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
           aria-label={isMuted ? "Ativar som" : "Desativar som"}
         >
           {isMuted ? (
@@ -94,7 +109,11 @@ export function VideoSection() {
         </button>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div
+          className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-opacity duration-700 ${
+            isPlaying ? "opacity-0" : "opacity-100"
+          }`}
+        >
           <div className="flex h-10 w-6 items-start justify-center rounded-full border border-primary-foreground/30 p-1.5">
             <div className="h-2 w-1 animate-bounce rounded-full bg-primary-foreground/60" />
           </div>

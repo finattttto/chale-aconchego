@@ -32,7 +32,13 @@ export function RecantoVideoSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Text content */}
-          <div className="order-2 lg:order-1">
+          <div
+            className={`order-2 lg:order-1 transition-all duration-700 ${
+              isPlaying
+                ? "opacity-0 translate-y-4 pointer-events-none max-h-0 overflow-hidden lg:max-h-[1000px]"
+                : "opacity-100 translate-y-0 max-h-[1000px]"
+            }`}
+          >
             <p className="text-xs uppercase tracking-[0.3em] text-[#4a6741]">
               Descubra
             </p>
@@ -77,38 +83,44 @@ export function RecantoVideoSection() {
               </video>
 
               {/* Poster fallback */}
-              {!isPlaying && (
-                <Image
-                  src="/assets/recanto/banner.jpg"
-                  alt="Recanto Aconchego"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  quality={80}
+              <Image
+                src="/assets/recanto/banner.jpg"
+                alt="Recanto Aconchego"
+                fill
+                className={`object-cover transition-opacity duration-700 ${
+                  isPlaying ? "opacity-0" : "opacity-100"
+                }`}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={80}
+              />
+
+              {/* Overlay gradient */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-t from-[#2d3a2e]/50 via-transparent to-transparent transition-opacity duration-700 ${
+                  isPlaying ? "opacity-0" : "opacity-100"
+                }`}
+              />
+
+              {/* Clickable overlay to pause when playing */}
+              {isPlaying && (
+                <button
+                  onClick={togglePlay}
+                  className="absolute inset-0 z-10 cursor-pointer"
+                  aria-label="Pausar video"
                 />
               )}
 
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a2e]/50 via-transparent to-transparent" />
-
               {/* Controls */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+              <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center justify-between">
                 <button
                   onClick={togglePlay}
-                  className="flex items-center gap-3 rounded-full bg-white/90 px-5 py-3 text-sm font-medium text-[#2d3a2e] backdrop-blur-sm transition-all hover:bg-white"
+                  className={`flex items-center gap-3 rounded-full bg-white/90 px-5 py-3 text-sm font-medium text-[#2d3a2e] backdrop-blur-sm transition-all hover:bg-white ${
+                    isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+                  }`}
                   aria-label={isPlaying ? "Pausar video" : "Reproduzir video"}
                 >
-                  {isPlaying ? (
-                    <>
-                      <Pause className="h-4 w-4" />
-                      <span>Pausar</span>
-                    </>
-                  ) : (
-                    <>
-                      <Play className="h-4 w-4" />
-                      <span>Assistir</span>
-                    </>
-                  )}
+                  <Play className="h-4 w-4" />
+                  <span>Assistir</span>
                 </button>
 
                 {isPlaying && (
@@ -127,8 +139,16 @@ export function RecantoVideoSection() {
               </div>
 
               {/* Decorative corner */}
-              <div className="absolute right-0 top-0 h-20 w-20 border-r-2 border-t-2 border-[#4a6741]/30" />
-              <div className="absolute bottom-0 left-0 h-20 w-20 border-b-2 border-l-2 border-[#4a6741]/30" />
+              <div
+                className={`absolute right-0 top-0 h-20 w-20 border-r-2 border-t-2 border-[#4a6741]/30 transition-opacity duration-700 ${
+                  isPlaying ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <div
+                className={`absolute bottom-0 left-0 h-20 w-20 border-b-2 border-l-2 border-[#4a6741]/30 transition-opacity duration-700 ${
+                  isPlaying ? "opacity-0" : "opacity-100"
+                }`}
+              />
             </div>
           </div>
         </div>
