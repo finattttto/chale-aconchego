@@ -71,7 +71,7 @@ export function RecantoVideoSection() {
                 muted={isMuted}
                 playsInline
                 preload="metadata"
-                poster="/assets/recanto/banner.jpg"
+                poster="/assets/recanto/banner-inicio.jpg"
               >
                 <source src="/assets/recanto/video-recanto.mp4" type="video/mp4" />
               </video>
@@ -79,7 +79,7 @@ export function RecantoVideoSection() {
               {/* Poster fallback */}
               {!isPlaying && (
                 <Image
-                  src="/assets/recanto/banner.jpg"
+                  src="/assets/recanto/banner-inicio.jpg"
                   alt="Recanto Aconchego"
                   fill
                   className="object-cover"

@@ -39,16 +39,6 @@ export function RecantoHighlights() {
           <div className="grid grid-cols-2 gap-3">
             <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
               <Image
-                src="/assets/recanto/rio.jpg"
-                alt="Rio proximo ao Recanto Aconchego"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                quality={70}
-              />
-            </div>
-            <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-sm">
-              <Image
                 src="/assets/recanto/fogueira.jpg"
                 alt="Fogueira no Recanto Aconchego"
                 fill
@@ -57,6 +47,17 @@ export function RecantoHighlights() {
                 quality={70}
               />
             </div>
+            <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-sm">
+              <Image
+                src="/assets/recanto/rio.jpg"
+                alt="Rio proximo ao Recanto Aconchego"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                quality={70}
+              />
+            </div>
+
           </div>
 
           {/* Content */}

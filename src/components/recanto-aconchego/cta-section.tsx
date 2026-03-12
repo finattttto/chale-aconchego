@@ -6,8 +6,8 @@ export function RecantoCtaSection() {
     <section className="relative overflow-hidden py-24 md:py-32">
       {/* Background image */}
       <Image
-        src="/assets/recanto/rio.jpg"
-        alt="Rio do Recanto Aconchego"
+        src="/assets/recanto/chale-noite.jpg"
+        alt="Chalé a noite"
         fill
         className="object-cover"
         sizes="100vw"

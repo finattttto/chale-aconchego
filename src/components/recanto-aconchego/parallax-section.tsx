@@ -7,7 +7,7 @@ export function RecantoParallaxSection() {
       <div
         className="relative h-[80vh] min-h-[600px] w-full"
         style={{
-          backgroundImage: "url('/assets/recanto/rio.jpg')",
+          backgroundImage: "url('/assets/recanto/chale-noite-pinheiro.jpg')",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

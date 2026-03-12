@@ -6,7 +6,7 @@ export function RecantoHero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/assets/recanto/banner.jpg"
+        src="/assets/recanto/banner-desfoque.jpg"
         alt="Vista do Recanto Aconchego junto ao rio"
         fill
         priority

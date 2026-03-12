@@ -28,8 +28,7 @@ export function RecantoAbout() {
           {/* Image */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm lg:aspect-[3/4]">
             <Image
-              // src="/assets/recanto/chale-frente.jpg"
-              src="/assets/recanto/banner.jpg"
+              src="/assets/recanto/banner-inicio.jpg"
               alt="Frente do Recanto Aconchego"
               fill
               className="object-cover"
