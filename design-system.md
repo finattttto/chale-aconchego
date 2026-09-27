@@ -370,6 +370,23 @@ reprodução. O parallax usa `backgroundAttachment: "fixed"` inline (não `next/
 
 ### 5.8 Tela de escolha (`/`)
 
+Dois layouts no mesmo componente: `MobileChooser` (abaixo de `md`) e `DesktopChooser` (`md` em
+diante). As fotos usam o mesmo `src` e o mesmo `sizes` (`IMAGE_SIZES`) nos dois, então o navegador
+baixa cada foto uma vez só; as do celular ficam `lazy` e não são baixadas no desktop.
+
+**Celular — toque para expandir:** `h-[100dvh] overflow-hidden`, sem rolagem em nenhum estado
+(testado em 390×844, 375×667 e 360×640). Cabeçalho compacto no fluxo (eyebrow `text-[11px]`, `h1`
+serif `text-2xl`, dica "Toque em um chalé para ver mais") e as duas metades em `flex-col`.
+No estado inicial as duas são `flex-1`, com foto limpa, `tagline` e nome serif `text-[1.75rem]`
+alinhados à esquerda na base. Tocar em uma a leva a `flex-[2.3]` (~70%) com
+`transition-[flex-grow] duration-700`, e revela descrição, até 3 selos (`tags`, `rounded-sm
+border-white/20 bg-white/10`) e o botão primário da marca (grid `0fr → 1fr` com `delay-200`); a outra
+recebe o mesmo desfoque/escurecimento do desktop e o texto "Toque para ver". Cada metade tem um único
+alvo de toque em `absolute inset-0`: um `<button>` que expande quando fechada, e um `<Link>` para a
+página quando aberta. Recorte por foto em `mobileImagePosition`.
+
+**Desktop — tela dividida:**
+
 `src/components/home/property-chooser.tsx` (client). Única tela que mostra as duas marcas juntas,
 então **cada painel usa a paleta da sua própria marca** e nada é compartilhado entre eles.
 

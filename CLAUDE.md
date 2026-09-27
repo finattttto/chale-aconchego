@@ -25,8 +25,8 @@ Every conversion path is an outbound WhatsApp deep link.
 
 **A chooser at `/` plus two independent landing pages, one per property.**
 
-- `src/app/page.tsx` → `src/components/home/property-chooser.tsx`: full-screen split (side by side
-  on desktop, stacked on mobile) that links to each property (Chalé Aconchego left/top,
+- `src/app/page.tsx` → `src/components/home/property-chooser.tsx`: full-screen split on desktop (side
+  by side, hover/focus effect) and a no-scroll "tap to expand" layout on mobile, linking to each property (Chalé Aconchego left/top,
   Chalé Araucária right/bottom). Desktop hover/focus grows the active half and blurs the
   other; see `design-system.md` §5.8.
 
