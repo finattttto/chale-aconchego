@@ -20,7 +20,7 @@ const HIGHLIGHTS = [
     icon: Sun,
     title: "Pôr do sol deslumbrante",
     description:
-      "Contemple o espetaculo do pôr do sol direto da varanda do chalé.",
+      "Contemple o espetáculo do pôr do sol direto da varanda do chalé.",
   },
   {
     icon: Coffee,
@@ -35,27 +35,34 @@ export function Highlights() {
     <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Image collage */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-              <Image
-                src="/assets/banheira.jpg"
-                alt="Banheira do Chalé Aconchego"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                quality={70}
-              />
+          {/* Image composition: main photo + overlapping inset */}
+          <div className="relative mx-auto w-full max-w-lg pb-16 pl-4 pt-4 sm:pb-20 lg:max-w-none">
+            <div className="relative aspect-[4/5] w-[80%]">
+              {/* Decorative offset frame */}
+              <div className="absolute -left-4 -top-4 h-full w-full rounded-sm border border-accent/30" />
+              <div className="relative h-full w-full overflow-hidden rounded-sm">
+                <Image
+                  src="/assets/banheira.jpg"
+                  alt="Banheira de hidromassagem do Chalé Aconchego com vista para o pôr do sol"
+                  fill
+                  className="object-cover object-[35%_center]"
+                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  quality={75}
+                />
+              </div>
             </div>
-            <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-sm">
-              <Image
-                src="/assets/fogueira-chale.jpg"
-                alt="Fogueira do Chalé Aconchego"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                quality={70}
-              />
+
+            <div className="absolute bottom-0 right-0 aspect-[3/4] w-[46%] overflow-hidden rounded-sm border-[6px] border-background bg-background">
+              <div className="relative h-full w-full overflow-hidden rounded-sm">
+                <Image
+                  src="/assets/fogueira-chale.jpg"
+                  alt="Fogueira acesa ao anoitecer no Chalé Aconchego"
+                  fill
+                  className="object-cover object-[55%_center]"
+                  sizes="(max-width: 1024px) 46vw, 23vw"
+                  quality={75}
+                />
+              </div>
             </div>
           </div>
 

@@ -1,9 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { Droplets, Trophy, Mountain, Flame, Users, Trees } from "lucide-react";
+import {
+  Bath,
+  Droplets,
+  Trophy,
+  Mountain,
+  Flame,
+  Users,
+  Trees,
+  Baby,
+} from "lucide-react";
 
 const ACTIVITIES = [
+  {
+    icon: Bath,
+    title: "Hidromassagem",
+    description: "Banho a dois com vista para a mata",
+  },
   {
     icon: Droplets,
     title: "Rio",
@@ -32,7 +46,12 @@ const ACTIVITIES = [
   {
     icon: Trees,
     title: "Trilhas",
-    description: "Caminhos em meio a natureza",
+    description: "Caminhos em meio à natureza",
+  },
+  {
+    icon: Baby,
+    title: "Balanço e playground",
+    description: "Diversão para as crianças",
   },
 ];
 
@@ -46,7 +65,7 @@ export function RecantoActivities() {
             O que fazer
           </p>
           <h2 className="mt-3 font-serif text-4xl font-medium tracking-tight text-[#2d3a2e] md:text-5xl text-balance">
-            Atividades para todos
+            Muito além do chalé
           </h2>
         </div>
 
@@ -55,8 +74,8 @@ export function RecantoActivities() {
           {/* Large image */}
           <div className="relative aspect-[3/4] overflow-hidden rounded-sm lg:col-span-2">
             <Image
-              src="/assets/recanto/area-externa.jpg"
-              alt="Area externa do Recanto Aconchego"
+              src="/assets/recanto/balanco.jpg"
+              alt="Balanço no gramado do Recanto Aconchego"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"

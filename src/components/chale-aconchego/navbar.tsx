@@ -8,10 +8,10 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 const NAV_ITEMS = [
   { label: "Sobre", href: "#sobre" },
   { label: "Experiências", href: "#experiencias" },
-  { label: "Video", href: "#video" },
+  { label: "Vídeo", href: "#video" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
-  { label: "Recanto Aconchego", href: "/recanto-aconchego" },
+  { label: "Chalé Araucária", href: "/chale-araucaria" },
 ];
 
 export function Navbar() {
@@ -48,7 +48,7 @@ export function Navbar() {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="Ir para o inicio">
+          <Link href="/chale-aconchego" className="flex items-center gap-3" aria-label="Ir para o início">
             <Image
               src="/assets/logo-chale.png"
               alt="Logo Chalé Aconchego"

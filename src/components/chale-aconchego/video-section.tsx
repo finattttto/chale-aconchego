@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { Play, Volume2, VolumeX } from "lucide-react";
+import { CHALE_VIDEO_URL } from "@/lib/constants";
 
 export function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,9 +38,9 @@ export function VideoSection() {
         muted={isMuted}
         playsInline
         preload="metadata"
-        poster="/assets/frente-sol.jpg"
+        poster="/assets/frente-sol-poster.webp"
       >
-        <source src="/assets/film.mp4" type="video/mp4" />
+        <source src={CHALE_VIDEO_URL} type="video/mp4" />
       </video>
 
       {/* Gradient overlays for text readability */}
@@ -60,7 +61,7 @@ export function VideoSection() {
           className={`group mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-primary-foreground/30 bg-primary-foreground/5 backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:border-primary-foreground/50 hover:bg-primary-foreground/10 md:h-32 md:w-32 ${
             isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
-          aria-label={isPlaying ? "Pausar video" : "Reproduzir video"}
+          aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
         >
           <Play
             className="h-10 w-10 text-primary-foreground ml-1 md:h-12 md:w-12"
@@ -72,7 +73,7 @@ export function VideoSection() {
           <button
             onClick={handlePlay}
             className="absolute inset-0 z-20 cursor-pointer"
-            aria-label="Pausar video"
+            aria-label="Pausar vídeo"
           />
         )}
 

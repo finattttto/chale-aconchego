@@ -15,23 +15,25 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Chalé Aconchego | Refúgio para casais em Descanso - SC",
+  title: "Chalé Aconchego e Chalé Araucária | Hospedagem em Descanso - SC",
   description:
-    "Chalé exclusivo para casais em meio à natureza. Banheira de hidromassagem, fogueira, Wi-Fi e muito conforto na Linha Macaco Branco, Descanso - SC.",
+    "Dois chalés românticos em meio à natureza em Descanso - SC: o Chalé Aconchego e o Chalé Araucária, com banheira de hidromassagem entre araucárias, no Recanto Aconchego.",
   keywords: [
     "chalé",
     "aconchego",
+    "araucária",
+    "hidromassagem",
     "descanso",
     "santa catarina",
     "hospedagem",
     "casais",
-    "natureza",
     "romântico",
+    "natureza",
   ],
   openGraph: {
-    title: "Chalé Aconchego | Refúgio para casais em Descanso - SC",
+    title: "Chalé Aconchego e Chalé Araucária | Hospedagem em Descanso - SC",
     description:
-      "Chalé exclusivo para casais em meio à natureza. Banheira de hidromassagem, fogueira, Wi-Fi e muito conforto.",
+      "Dois chalés românticos em meio à natureza em Descanso - SC. Escolha entre o Chalé Aconchego e o Chalé Araucária.",
     type: "website",
     locale: "pt_BR",
   },

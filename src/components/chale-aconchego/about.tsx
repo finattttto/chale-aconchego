@@ -47,7 +47,7 @@ export function About() {
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
               Com acomodações acolhedoras, banheira de hidromassagem 
-              e uma area externa com churrasqueira e fogueira, o chalé
+              e uma área externa com churrasqueira e fogueira, o chalé
               convida você a desacelerar e viver momentos inesquecíveis.
             </p>
             {/* Amenities grid */}
@@ -80,12 +80,12 @@ export function About() {
                   500+
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  hospedes atendidos
+                  hóspedes atendidos
                 </p>
               </div>
               <div>
                 <span className="font-serif text-3xl font-medium text-foreground">
-                  4.9
+                  4,9
                 </span>
                 <p className="mt-1 text-sm text-muted-foreground">
                   avaliação média

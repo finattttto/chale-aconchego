@@ -16,10 +16,10 @@ export function Footer() {
             </p>
             <div className="mt-6">
               <Link
-                href="/recanto-aconchego"
+                href="/chale-araucaria"
                 className="text-sm text-primary-foreground/40 underline underline-offset-4 transition-colors hover:text-primary-foreground/70"
               >
-                Conheça também o Recanto Aconchego
+                Conheça também o Chalé Araucária
               </Link>
             </div>
           </div>

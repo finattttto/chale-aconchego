@@ -12,25 +12,25 @@ import { RecantoFaq } from "@/components/recanto-aconchego/faq";
 import { RecantoFooter } from "@/components/recanto-aconchego/footer";
 
 export const metadata: Metadata = {
-  title: "Recanto Aconchego | Natureza e aventura em Descanso - SC",
+  title: "Chalé Araucária | Refúgio romântico com hidromassagem em Descanso - SC",
   description:
-    "Experiencia de glamping e natureza em Descanso - SC. Chalé junto ao rio, area de camping, fogueira, campo de voleio e espaco para eventos. Perfeito para familias e amigos.",
+    "Chalé para casais entre araucárias, com banheira de hidromassagem com vista para a mata, fogueira e acesso ao rio. Fica no Recanto Aconchego, com área de festas, camping e campo de vôlei, em Descanso - SC.",
   keywords: [
-    "recanto",
-    "aconchego",
+    "chalé araucária",
+    "hidromassagem",
+    "casais",
+    "romântico",
+    "recanto aconchego",
     "descanso",
     "santa catarina",
-    "glamping",
-    "camping",
     "natureza",
-    "familia",
     "rio",
-    "aventura",
+    "área de festas",
   ],
   openGraph: {
-    title: "Recanto Aconchego | Natureza e aventura em Descanso - SC",
+    title: "Chalé Araucária | Refúgio romântico com hidromassagem em Descanso - SC",
     description:
-      "Experiencia de glamping e natureza em Descanso - SC. Chalé junto ao rio, fogueira, campo de voleio e espaco para eventos.",
+      "Chalé para casais entre araucárias, com banheira de hidromassagem com vista para a mata, fogueira e acesso ao rio.",
     type: "website",
     locale: "pt_BR",
   },
@@ -42,7 +42,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RecantoAconchego() {
+export default function ChaleAraucaria() {
   return (
     <div className="flex min-h-screen flex-col bg-[#f5f2ed] text-[#2d3a2e]">
       <RecantoNavbar />

@@ -7,7 +7,7 @@ export function CtaSection() {
       {/* Background image */}
       <Image
         src="/assets/por-do-sol.jpg"
-        alt="Por do sol no Chalé Aconchego"
+        alt="Pôr do sol no Chalé Aconchego"
         fill
         className="object-cover"
         sizes="100vw"

@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 const FAQ_ITEMS = [
   {
-    question: "Datas disponiveis",
+    question: "Datas disponíveis",
     answer: null,
     calendar: true,
   },
@@ -19,8 +19,8 @@ const FAQ_ITEMS = [
     answer: null,
     list: [
       {
-        bold: "Acomodaçoes",
-        text: "Espaço ideal para 2 pessoas, com 1 cama na parte inferior e um sofa-cama na parte superior.",
+        bold: "Acomodações",
+        text: "Espaço ideal para 2 pessoas, com 1 cama na parte inferior e um sofá-cama na parte superior.",
       },
       {
         bold: "Banheira de Hidromassagem",
@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
       },
       {
         bold: "Cozinha Equipada",
-        text: "A cozinha possui utensilios, fogão, frigobar e micro-ondas para oferecer flexibilidade na preparação de refeições.",
+        text: "A cozinha possui utensílios, fogão, frigobar e micro-ondas para oferecer flexibilidade na preparação de refeições.",
       },
       {
         bold: "Área Externa",
@@ -41,12 +41,12 @@ const FAQ_ITEMS = [
     ],
   },
   {
-    question: "Quais são os servicos incluidos?",
+    question: "Quais são os serviços incluídos?",
     answer:
-      "O aluguel inclui Wi-Fi, utensílios de cozinha, roupa de cama e banho. A estadia pode incluir serviços opcionais, como café da manhã ou passeio a cavalo. Cada um dos adicionais tem seu valor cobrado a parte da estadia. Caso seja do interesse do hóspede, é necessário solicitar os serviços no momento da reserva!",
+      "O aluguel inclui Wi-Fi, utensílios de cozinha, roupa de cama e banho. A estadia pode incluir serviços opcionais, como café da manhã ou passeio a cavalo. Cada um dos adicionais tem seu valor cobrado à parte da estadia. Caso seja do interesse do hóspede, é necessário solicitar os serviços no momento da reserva!",
   },
   {
-    question: "Posso levar meu Pet?",
+    question: "Posso levar meu pet?",
     answer:
       "Sim, animais de estimação são bem-vindos no chalé. Apenas solicitamos que você informe sobre a presença do seu pet no momento da reserva. Há uma cobrança adicional por pet no valor da diária, que deve ser consultada previamente.",
   },
@@ -56,18 +56,14 @@ const FAQ_ITEMS = [
       "Cancelamento até 7 dias antes da data de check-in: reembolso total. Cancelamento dentro de 7 dias da data de check-in: 50% do valor da reserva não será devolvido.",
   },
   {
-    question: "Valores dos servicos",
+    question: "Valores dos serviços",
     answer: null,
     list: [
-      { bold: "Segunda a quinta-feira", text: "R$ 300,00 por diaria." },
-      {
-        bold: "Sextas, sábados, domingos e feriados",
-        text: "R$ 350,00 por diaria.",
-      },
-      {
-        bold: "Café da manhã e passeio a cavalo",
-        text: "Consultar na reserva.",
-      },
+      { bold: "Segunda a quinta-feira", text: "R$ 300,00 por diária." },
+      { bold: "Sextas e domingos", text: "R$ 350,00 por diária." },
+      { bold: "Sábados e feriados", text: "R$ 400,00 por diária." },
+      { bold: "Café da manhã", text: "R$ 80,00." },
+      { bold: "Passeio a cavalo", text: "R$ 100,00 por casal." },
     ],
   },
 ];
@@ -109,7 +105,7 @@ function FaqItem({
                 src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=UTC&bgcolor=%23ffffff&showTitle=0&showPrint=0&showCalendars=0&showTz=0&showTabs=0&src=Y2hhbGVkb2Fjb25jaGVnb0BnbWFpbC5jb20&color=%23039BE5"
                 className="h-[400px] w-full max-w-[700px] rounded-sm border-0 md:h-[500px]"
                 loading="lazy"
-                title="Calendario de disponibilidade"
+                title="Calendário de disponibilidade"
               />
             </div>
           )}

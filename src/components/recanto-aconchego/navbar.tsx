@@ -2,16 +2,17 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { RECANTO_WHATSAPP_LINK } from "@/lib/constants";
 
 const NAV_ITEMS = [
   { label: "Sobre", href: "#sobre" },
   { label: "Atividades", href: "#atividades" },
   { label: "Galeria", href: "#galeria" },
-  { label: "Video", href: "#video" },
+  { label: "Vídeo", href: "#video" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
-  { label: "Chalé Aconchego", href: "/" },
+  { label: "Chalé Aconchego", href: "/chale-aconchego" },
 ];
 
 export function RecantoNavbar() {
@@ -49,16 +50,23 @@ export function RecantoNavbar() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link
-            href="/recanto-aconchego"
+            href="/chale-araucaria"
             className="flex items-center gap-3"
-            aria-label="Ir para o inicio"
+            aria-label="Ir para o início"
           >
+            <Image
+              src="/assets/logo-chale.png"
+              alt="Logo Chalé Aconchego"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
+            />
             <span
               className={`font-serif text-lg font-semibold tracking-tight transition-colors duration-500 ${
                 menuOpen || scrolled ? "text-[#2d3a2e]" : "text-white"
               }`}
             >
-              Recanto Aconchego
+              Chalé Araucária
             </span>
           </Link>
 

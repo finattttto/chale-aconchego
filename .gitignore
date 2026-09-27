@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Vídeos ficam no Cloudflare R2 (midia.chaleaconchego.com), nunca no repositório
+public/**/*.mp4

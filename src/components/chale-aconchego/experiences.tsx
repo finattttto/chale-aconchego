@@ -3,7 +3,7 @@ import Image from "next/image";
 const EXPERIENCES = [
   {
     src: "/assets/frente-sol.jpg",
-    alt: "Frente do chalé ao por do sol",
+    alt: "Frente do chalé ao pôr do sol",
     title: "Ambiente aconchegante",
     description:
       "Entre e sinta-se em casa, onde cada canto foi pensado para o seu bem-estar.",
@@ -27,23 +27,23 @@ const EXPERIENCES = [
     alt: "Fogueira ao ar livre",
     title: "Fogueira",
     description:
-      "Reuna-se ao redor da fogueira para momentos acolhedores sob o céu estrelado.",
+      "Reúna-se ao redor da fogueira para momentos acolhedores sob o céu estrelado.",
   },
   {
     src: "/assets/cafe.jpg",
-    alt: "Café da manha colonial",
-    title: "Café da manha",
+    alt: "Café da manhã colonial",
+    title: "Café da manhã",
     description:
       "Reserve seu café da manhã com produtos coloniais para iniciar bem o seu dia!",
-    detail: "*Cobranca adicional. O cardápio varia de acordo com o dia.",
+    detail: "*Cobrança adicional. O cardápio varia de acordo com o dia.",
   },
   {
     src: "/assets/cavalo.jpg",
     alt: "Passeio a cavalo",
     title: "Passeio a cavalo",
     description:
-      "Desfrute de uma experiencia unica através de um passeio a cavalo nas redondezas da propriedade!",
-    detail: "*Cobrança adicional. Sujeito a disponibilidade.",
+      "Desfrute de uma experiência única por meio de um passeio a cavalo nas redondezas da propriedade!",
+    detail: "*Cobrança adicional. Sujeito à disponibilidade.",
   },
 ];
 
@@ -60,7 +60,7 @@ export function Experiences() {
             Explore o Chalé
           </h2>
           <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-            Cada momento aqui e uma oportunidade de criar memórias inesquecíveis.
+            Cada momento aqui é uma oportunidade de criar memórias inesquecíveis.
           </p>
         </div>
 

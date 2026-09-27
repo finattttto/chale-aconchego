@@ -9,14 +9,14 @@ export function RecantoFooter() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-2xl font-medium">Recanto Aconchego</h3>
+            <h3 className="font-serif text-2xl font-medium">Chalé Araucária</h3>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
-              Uma experiência imersiva em meio a natureza, onde o rio, a
-              fogueira e o céu estrelado são seus companheiros.
+              Refúgio romântico com banheira de hidromassagem entre araucárias,
+              no Recanto Aconchego.
             </p>
             <div className="mt-6">
               <Link
-                href="/"
+                href="/chale-aconchego"
                 className="text-sm text-white/40 underline underline-offset-4 transition-colors hover:text-white/70"
               >
                 Conheça também o Chalé Aconchego
@@ -66,13 +66,13 @@ export function RecantoFooter() {
             </h4>
             <div className="mt-4 overflow-hidden rounded-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.0010348799974!2d-53.50446072381259!3d-26.839919390167637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fa51c225bfc4eb%3A0xec83033ab44ade68!2sChal%C3%A9%20Aconchego!5e0!3m2!1spt-BR!2sbr!4v1724801576954!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.0010348799974!2d-53.5060498!3d-26.8400141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fa51c79c4241d5%3A0xa6550f4dbef90d5!2sRecanto%20Aconchego!5e0!3m2!1spt-BR!2sbr!4v1724801576954!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localizacao do Recanto Aconchego no Google Maps"
+                title="Localização do Chalé Araucária no Google Maps"
               />
             </div>
           </div>
@@ -83,7 +83,7 @@ export function RecantoFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-5 lg:px-8">
           <p className="text-xs text-white/30">
-            &copy; {new Date().getFullYear()} Recanto Aconchego. Todos os
+            &copy; {new Date().getFullYear()} Chalé Araucária. Todos os
             direitos reservados.
           </p>
         </div>

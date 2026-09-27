@@ -2,46 +2,68 @@ import Image from "next/image";
 
 const EXPERIENCES = [
   {
-    src: "/assets/recanto/rio.jpg",
-    alt: "Rio cristalino próximo ao recanto",
-    title: "Banho no rio",
+    src: "/assets/recanto/hidromassagem-vista.jpg",
+    alt: "Banheira de hidromassagem diante da janela com vista para a mata",
+    title: "Hidromassagem com vista",
     description:
-      "Refresque-se nas águas cristalinas do rio que corta a propriedade. Pura conexão com a natureza.",
+      "Banheira para dois diante de janelas amplas, com a mata como paisagem.",
   },
   {
-    src: "/assets/recanto/rede.jpg",
-    alt: "Rede suspensa entre as árvores",
-    title: "Redes suspensas",
+    src: "/assets/recanto/banho-espuma.jpg",
+    alt: "Banho de espuma na hidromassagem com luz indireta",
+    position: "center 85%",
+    title: "Noites a dois",
     description:
-      "Relaxe em redes suspensas entre as árvores, embalado pelo som do rio e dos pássaros.",
+      "Luz baixa, banho de espuma e o silêncio da natureza para relaxar sem pressa.",
   },
   {
-    src: "/assets/recanto/voleio.jpg",
-    alt: "Campo de vôlei",
-    title: "Campo de vôlei",
+    src: "/assets/recanto/hidromassagem-janela.jpg",
+    alt: "Espaço da hidromassagem visto pelo vidro, iluminado ao entardecer",
+    title: "Clima de fim de tarde",
     description:
-      "Divirta-se com a família e amigos em partidas animadas no campo de vôlei de areia.",
+      "Madeira, luz indireta e vidro: o espaço da hidromassagem ganha outro clima ao entardecer.",
+  },
+  {
+    src: "/assets/recanto/banner.jpg",
+    alt: "Chalé Araucária entre araucárias ao pôr do sol",
+    title: "O chalé",
+    description:
+      "Chalé de madeira entre as araucárias, com deck e iluminação aconchegante.",
   },
   {
     src: "/assets/recanto/fogueira.jpg",
-    alt: "Fogueira ao ar livre",
+    alt: "Fogueira ao ar livre em frente ao chalé",
     title: "Fogueira",
     description:
       "Noites especiais ao redor da fogueira, com histórias, marshmallows e o céu estrelado.",
   },
   {
-    src: "/assets/recanto/area-externa.jpg",
-    alt: "Área de festas externa",
+    src: "/assets/recanto/area-festas.jpg",
+    alt: "Área de festas coberta com mesas, bancos e mesa de sinuca",
     title: "Área de festas",
     description:
-      "Espaço amplo e coberto para reunir a família em celebrações e confraternizações.",
+      "Espaço coberto com mesas, bancos, geladeira e mesa de sinuca para festas de até 20 pessoas.",
   },
   {
-    src: "/assets/recanto/camping.jpg",
-    alt: "Área de camping",
-    title: "Camping",
+    src: "/assets/recanto/recanto-luzes.jpg",
+    alt: "Varal de luzes e fogueira no gramado do Recanto Aconchego",
+    title: "Recanto Aconchego",
     description:
-      "Traga sua barraca e viva a experiência completa de acampamento em meio à natureza.",
+      "Gramado com varal de luzes e fogueira para aproveitar o fim de tarde ao ar livre.",
+  },
+  {
+    src: "/assets/recanto/volei.jpg",
+    alt: "Campo de vôlei gramado entre araucárias",
+    title: "Campo de vôlei",
+    description:
+      "Campo de vôlei gramado para partidas animadas com a família e os amigos.",
+  },
+  {
+    src: "/assets/recanto/playground.jpg",
+    alt: "Casinha com escorregador no playground",
+    title: "Playground",
+    description:
+      "Casinha com escorregador e balanço para as crianças brincarem no gramado.",
   },
 ];
 
@@ -52,13 +74,13 @@ export function RecantoExperiences() {
         {/* Section header */}
         <div className="mb-16 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-[#6b7c6b]">
-            Atividades
+            Galeria
           </p>
           <h2 className="mt-3 font-serif text-4xl font-medium tracking-tight text-[#2d3a2e] md:text-5xl text-balance">
-            Explore o Recanto
+            Explore o chalé e o Recanto
           </h2>
           <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-[#6b7c6b]">
-            Aventura, diversão e descanso em um só lugar, para toda a família.
+            Da hidromassagem com vista para a mata à fogueira sob as estrelas.
           </p>
         </div>
 
@@ -75,6 +97,7 @@ export function RecantoExperiences() {
                   alt={exp.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={exp.position ? { objectPosition: exp.position } : undefined}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   quality={70}
                 />

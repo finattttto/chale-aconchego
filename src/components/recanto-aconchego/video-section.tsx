@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import Image from "next/image";
+import { RECANTO_VIDEO_URL } from "@/lib/constants";
 
 export function RecantoVideoSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,17 +38,17 @@ export function RecantoVideoSection() {
               Descubra
             </p>
             <h2 className="mt-3 font-serif text-3xl font-medium tracking-tight text-[#2d3a2e] md:text-4xl lg:text-5xl text-balance">
-              Uma experiência que vai além do comum
+              Uma experiência feita para dois
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[#2d3a2e]/70 md:text-lg">
-              No Recanto Aconchego, cada momento é uma oportunidade de reconexão. 
-              O som do rio, o frescor da mata e a companhia de quem você ama 
-              transformam dias simples em memórias eternas.
+              No Chalé Araucária, cada momento é uma oportunidade de reconexão.
+              A hidromassagem, o som do rio, o frescor da mata e a companhia de
+              quem você ama transformam dias simples em memórias eternas.
             </p>
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#2d3a2e]/60">
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#4a6741]" />
-                <span>Natureza tranquila</span>
+                <span>Hidromassagem</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#4a6741]" />
@@ -55,7 +56,7 @@ export function RecantoVideoSection() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#4a6741]" />
-                <span>Espaço para todos</span>
+                <span>Natureza tranquila</span>
               </div>
             </div>
           </div>
@@ -71,16 +72,16 @@ export function RecantoVideoSection() {
                 muted={isMuted}
                 playsInline
                 preload="metadata"
-                poster="/assets/recanto/banner-inicio.jpg"
+                poster="/assets/recanto/banner-inicio-poster.webp"
               >
-                <source src="/assets/recanto/video-recanto.mp4" type="video/mp4" />
+                <source src={RECANTO_VIDEO_URL} type="video/mp4" />
               </video>
 
               {/* Poster fallback */}
               {!isPlaying && (
                 <Image
                   src="/assets/recanto/banner-inicio.jpg"
-                  alt="Recanto Aconchego"
+                  alt="Chalé Araucária"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -96,7 +97,7 @@ export function RecantoVideoSection() {
                 <button
                   onClick={togglePlay}
                   className="flex items-center gap-3 rounded-full bg-white/90 px-5 py-3 text-sm font-medium text-[#2d3a2e] backdrop-blur-sm transition-all hover:bg-white"
-                  aria-label={isPlaying ? "Pausar video" : "Reproduzir video"}
+                  aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
                 >
                   {isPlaying ? (
                     <>

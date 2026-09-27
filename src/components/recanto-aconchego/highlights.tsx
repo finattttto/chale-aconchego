@@ -1,32 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { Droplets, Flame, Trees, Gift } from "lucide-react";
+import { Bath, Droplets, Flame, Gift } from "lucide-react";
 
 const HIGHLIGHTS = [
   {
-    icon: Droplets,
-    title: "Acesso ao rio",
+    icon: Bath,
+    title: "Banheira de hidromassagem",
     description:
-      "Banhe-se nas águas do rio que margeia a propriedade. Um refrescante natural perfeito.",
+      "Banheira para dois com janelas amplas para a mata e luz indireta. Perfeita para relaxar ao entardecer ou sob as estrelas.",
   },
   {
     icon: Flame,
     title: "Fogueira ao ar livre",
     description:
-      "Reúna a família ao redor da fogueira para noites memoráveis sob o céu estrelado.",
+      "Noites a dois ao redor da fogueira, entre araucárias e sob o céu estrelado.",
   },
   {
-    icon: Trees,
-    title: "Espaço para acampamento",
+    icon: Droplets,
+    title: "Acesso ao rio",
     description:
-      "Traga sua barraca e acampe em contato direto com a natureza. Perfeito para grupos maiores.",
+      "Banhe-se nas águas do rio que margeia a propriedade. Um refresco natural perfeito.",
   },
   {
     icon: Gift,
-    title: "Área de festas",
+    title: "Recanto Aconchego para festas",
     description:
-      "Espaço externo amplo para reunir a família e amigos, com capacidade para mais de 30 pessoas.",
+      "A área externa ao redor do chalé recebe festas e confraternizações de até 20 pessoas, com camping, vôlei e playground.",
   },
 ];
 
@@ -35,29 +35,35 @@ export function RecantoHighlights() {
     <section className="bg-[#f5f2ed] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Image collage */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-              <Image
-                src="/assets/recanto/fogueira.jpg"
-                alt="Fogueira no Recanto Aconchego"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                quality={70}
-              />
-            </div>
-            <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-sm">
-              <Image
-                src="/assets/recanto/rio.jpg"
-                alt="Rio proximo ao Recanto Aconchego"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                quality={70}
-              />
+          {/* Image composition: main photo + overlapping inset */}
+          <div className="relative mx-auto w-full max-w-lg pb-16 pl-4 pt-4 sm:pb-20 lg:max-w-none">
+            <div className="relative aspect-[4/5] w-[80%]">
+              {/* Decorative offset frame */}
+              <div className="absolute -left-4 -top-4 h-full w-full rounded-sm border border-[#4a6741]/30" />
+              <div className="relative h-full w-full overflow-hidden rounded-sm">
+                <Image
+                  src="/assets/recanto/chale-araucaria-noite.jpg"
+                  alt="Chalé Araucária iluminado à noite entre araucárias"
+                  fill
+                  className="object-cover object-[center_65%]"
+                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  quality={75}
+                />
+              </div>
             </div>
 
+            <div className="absolute bottom-0 right-0 aspect-[3/4] w-[46%] overflow-hidden rounded-sm border-[6px] border-[#f5f2ed] bg-[#f5f2ed]">
+              <div className="relative h-full w-full overflow-hidden rounded-sm">
+                <Image
+                  src="/assets/recanto/hidromassagem-noite.jpg"
+                  alt="Banheira de hidromassagem cheia, iluminada à noite"
+                  fill
+                  className="object-cover object-[center_78%]"
+                  sizes="(max-width: 1024px) 46vw, 23vw"
+                  quality={75}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Content */}
@@ -66,7 +72,7 @@ export function RecantoHighlights() {
               Diferenciais
             </p>
             <h2 className="mt-3 font-serif text-4xl font-medium tracking-tight text-[#2d3a2e] md:text-5xl text-balance">
-              Uma experiência completa
+              Pensado para casais
             </h2>
 
             <div className="mt-10 space-y-8">

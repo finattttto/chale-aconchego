@@ -7,7 +7,7 @@ export function RecantoCtaSection() {
       {/* Background image */}
       <Image
         src="/assets/recanto/chale-noite.jpg"
-        alt="Chalé a noite"
+        alt="Chalé Araucária à noite"
         fill
         className="object-cover"
         sizes="100vw"
@@ -17,14 +17,14 @@ export function RecantoCtaSection() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-8">
         <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-          Pronto para a aventura?
+          Pronto para desacelerar?
         </p>
         <h2 className="mt-3 font-serif text-4xl font-medium tracking-tight text-white md:text-5xl text-balance">
-          Reserve sua experiência na natureza
+          Reserve sua noite no Chalé Araucária
         </h2>
         <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-white/70">
-          Entre em contato pelo WhatsApp e garanta a sua estadia no Recanto
-          Aconchego. Traga a família, os amigos ou venha a dois.
+          Entre em contato pelo WhatsApp e garanta a sua estadia. Venha a dois
+          ou reserve o Recanto Aconchego para reunir a família e os amigos.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a

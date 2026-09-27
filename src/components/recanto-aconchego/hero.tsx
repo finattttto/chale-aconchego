@@ -6,11 +6,11 @@ export function RecantoHero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/assets/recanto/banner-desfoque.jpg"
-        alt="Vista do Recanto Aconchego junto ao rio"
+        src="/assets/recanto/chale-araucaria-desfoque.jpg"
+        alt="Chalé Araucária iluminado ao anoitecer entre araucárias"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-[center_70%]"
         sizes="100vw"
         quality={80}
       />
@@ -20,14 +20,14 @@ export function RecantoHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/70">
-          Natureza, família e aventura
+          Refúgio romântico entre araucárias
         </p>
         <h1 className="font-serif text-5xl font-medium leading-tight tracking-tight text-white md:text-7xl lg:text-8xl text-balance">
-          Recanto Aconchego
+          Chalé Araucária
         </h1>
         <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
-          Uma experiência imersiva em meio a natureza, onde o rio, a fogueira e
-          o céu estrelado são seus companheiros.
+          Banheira de hidromassagem com vista para a mata, fogueira sob as
+          estrelas e o som do rio. Um refúgio feito para dois.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -43,7 +43,7 @@ export function RecantoHero() {
             href="#sobre"
             className="inline-flex items-center rounded-sm border border-white/30 px-8 py-3.5 text-sm font-medium tracking-wide text-white transition-all hover:bg-white/10"
           >
-            Conheça o recanto
+            Conheça o chalé
           </a>
         </div>
       </div>
