@@ -13,3 +13,4 @@ export const RECANTO_INSTAGRAM_LINK = "https://www.instagram.com/chaleaconchegoo
 export const MEDIA_URL = "https://midia.chaleaconchego.com";
 export const CHALE_VIDEO_URL = `${MEDIA_URL}/video-chale-aconchego.mp4`;
 export const RECANTO_VIDEO_URL = `${MEDIA_URL}/video-chale-araucaria.mp4`;
+export const RECANTO_PARALLAX_VIDEO_URL = `${MEDIA_URL}/panoramico-chale-araucaria.mp4`;

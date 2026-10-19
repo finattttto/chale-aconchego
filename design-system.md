@@ -315,7 +315,7 @@ centralizado: eyebrow e `h2` ficam alinhados à esquerda dentro da coluna de tex
 
 **Alternância de fundo** dá o ritmo da página:
 Chalé — `background` → `background` → `card` → imagem → `card` → imagem → `background`.
-Recanto — `#f5f2ed` em quase tudo, com `#eae6df` na *Galeria* e imagem no parallax/CTA.
+Recanto — `#f5f2ed` em quase tudo, com `#eae6df` na *Galeria* e vídeo no parallax e imagem no CTA.
 
 **Composição sobreposta** (seção de diferenciais, `highlights.tsx` nos dois sites): foto principal
 `aspect-[4/5]` com `w-[80%]` + moldura decorativa deslocada (`absolute -left-4 -top-4 h-full w-full
@@ -364,7 +364,10 @@ Títulos de coluna: `text-sm font-medium uppercase tracking-[0.2em]` em `/50` (C
 `<video>` nativo com `loop muted playsInline preload="metadata" poster="…"` e `<source>` mp4;
 `className="absolute inset-0 h-full w-full object-cover"`. Controles de play/mute por
 `useRef` + `useState`, com textos e overlays desaparecendo por `opacity` + `translate-y` durante a
-reprodução. O parallax usa `backgroundAttachment: "fixed"` inline (não `next/image`).
+reprodução. O parallax do Recanto usa um `<video>` de fundo (`RECANTO_PARALLAX_VIDEO_URL`, sem controles,
+`aria-hidden`) com `position: fixed` recortado pelo `clipPath: "inset(0)"` da seção, o que reproduz o
+efeito de `background-attachment: fixed`; ele só carrega/toca via `IntersectionObserver` quando a
+seção está perto da tela e não toca com `prefers-reduced-motion`.
 
 ---
 

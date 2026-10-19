@@ -1,19 +1,54 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { RECANTO_PARALLAX_VIDEO_URL } from "@/lib/constants";
+
 export function RecantoParallaxSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Só baixa e toca o vídeo quando a seção está perto da tela; pausa ao sair
+  useEffect(() => {
+    const container = containerRef.current;
+    const video = videoRef.current;
+    if (!container || !video) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="relative">
-      {/* Parallax Container with CSS fixed background */}
+      {/* Parallax: o clip-path recorta o vídeo fixo na viewport ao tamanho da seção */}
       <div
-        className="relative h-[80vh] min-h-[600px] w-full"
-        style={{
-          backgroundImage: "url('/assets/recanto/chale-noite-pinheiro.webp')",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
+        ref={containerRef}
+        className="relative h-[80vh] min-h-[600px] w-full bg-[#2d3a2e]"
+        style={{ clipPath: "inset(0)" }}
       >
+        <video
+          ref={videoRef}
+          className="fixed inset-0 h-screen w-full object-cover"
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/assets/recanto/chale-noite-pinheiro.webp"
+          aria-hidden="true"
+        >
+          <source src={RECANTO_PARALLAX_VIDEO_URL} type="video/mp4" />
+        </video>
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#2d3a2e]/70 via-[#2d3a2e]/50 to-[#2d3a2e]/80" />
 
@@ -34,10 +69,15 @@ export function RecantoParallaxSection() {
         </div>
       </div>
 
-      {/* Decorative gradient to blend with next section */}
-      <div className="h-24 bg-gradient-to-b from-transparent to-[#f5f2ed]"
+      {/* Decorative gradient to blend with next section. Termina sólido e passa 4px da borda
+          do vídeo para cobrir a linha que o arredondamento de 80vh deixa à mostra */}
+      <div
+        className="pointer-events-none"
         style={{
+          height: "calc(6rem + 4px)",
           marginTop: "-6rem",
+          marginBottom: "-4px",
+          background: "linear-gradient(to bottom, transparent, #f5f2ed calc(100% - 8px))",
           position: "relative",
           zIndex: 10,
         }}

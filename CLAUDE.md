@@ -105,12 +105,12 @@ Renaming a section id means updating that page's `NAV_ITEMS`.
   `public/assets/` (Chalé) and `public/assets/recanto/` (Recanto). `next.config.mjs` enables
   AVIF/WebP. Videos are plain `<video>` with a `poster` still, `playsInline`, `preload="metadata"`.
   **Videos are not in the repo**: they live in a public Cloudflare R2 bucket served at
-  `midia.chaleaconchego.com` (DNS is on Cloudflare), referenced via `CHALE_VIDEO_URL` /
-  `RECANTO_VIDEO_URL` in `src/lib/constants.ts`. `public/**/*.mp4` is gitignored. To change a
+  `midia.chaleaconchego.com` (DNS is on Cloudflare), referenced via `CHALE_VIDEO_URL`,
+  `RECANTO_VIDEO_URL` and `RECANTO_PARALLAX_VIDEO_URL` (the Recanto parallax background) in `src/lib/constants.ts`. `public/**/*.mp4` is gitignored. To change a
   video, compress it (see below), upload it to the bucket, and update the constant.
 - **Performance — what bypasses the optimizer.** `next/image` already serves resized AVIF, so
   converting sources to WebP gains nothing for visitors. But a `<video poster>` and a CSS
-  `backgroundImage` (the Recanto parallax) download the raw file as-is, so they must point to a
+  `backgroundImage` download the raw file as-is, so they must point to a
   pre-sized `.webp` (`frente-sol-poster.webp`, `recanto/banner-inicio-poster.webp`,
   `recanto/chale-noite-pinheiro.webp`), never to a multi-MB original. Source photos are kept at
   ≤2560px on the long edge (JPEG q82, orientation baked in, metadata stripped). Videos are H.264
